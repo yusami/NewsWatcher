@@ -7,24 +7,38 @@
 
 ## Description
 
-1. Fetch the content from the url.
-2. Parse it.
+1. Fetch the news from each url.
+2. Parse it and show the result.
 
 ## Requirement
 
 * Ruby
+* [nokogiri](http://www.nokogiri.org)
 
 ## Usage
 
-* Basic command.
+* Run the script.
 
 ~~~
 ./watcher.rb
 ~~~
 
-## Install
+* Latest news is shown as below.
 
-* None
+~~~
+-----------
+Yahoo!ニュース
+https://news.yahoo.co.jp/
+- ...
+-----------
+経済、株価、ビジネス、政治のニュース:日経電子版
+http://www.nikkei.com
+- ...
+~~~
+
+## Tips
+
+* [nokogiri](http://www.nokogiri.org) is powerful tool for parsing HTML, rather than using regex.
 
 ## Licence
 
