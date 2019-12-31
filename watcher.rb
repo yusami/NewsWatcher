@@ -22,15 +22,16 @@ def fetch(site)
 
   # Items
   regex = site[:regex]
-  doc.xpath(regex).each do |node|
+  doc.xpath(regex).each_with_index do |node, i|
     puts "- " + node.elements.inject("",:+)
+    break if i >= 9
   end
 end
 
 # URL list
 sites = []
-sites << {:url => "https://news.yahoo.co.jp/", :regex=>'//p[@class="ttl"]'}
-sites << {:url => "http://www.nikkei.com", :regex=>'//span[@class="cmnc-link"]'}
+sites << {:url => "https://news.yahoo.co.jp/", :regex=>'//li[@class="topicsListItem "]'}
+sites << {:url => "https://www.nikkei.com", :regex=>'//a[@class="k-card__block-link"]'}
 
 sites.each do |site|
   fetch site
