@@ -33,7 +33,7 @@ end
 # URL list
 sites = []
 sites << {:url => "https://news.yahoo.co.jp/", :regex=>'//li[@class="topicsListItem "]'}
-sites << {:url => "https://www.nikkei.com", :regex=>'//a[@class="k-card__block-link"]'}
+sites << {:url => "https://www.nikkei.com/", :regex=>'//a[@class="k-card__block-link"]'}
 
 sites.each do |site|
   fetch site

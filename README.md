@@ -31,8 +31,8 @@ Yahoo!ニュース
 https://news.yahoo.co.jp/
 - ...
 -----------
-経済、株価、ビジネス、政治のニュース:日経電子版
-http://www.nikkei.com
+日本経済新聞
+https://www.nikkei.com/
 - ...
 ~~~
 
@@ -42,7 +42,7 @@ http://www.nikkei.com
 
 ## Licence
 
-* Copyright &copy; 2016-2017 yusami
+* Copyright &copy; 2016-2019 yusami
 * Licensed under the [Apache License, Version 2.0][Apache]
 
 [Apache]: http://www.apache.org/licenses/LICENSE-2.0
