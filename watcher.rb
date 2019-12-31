@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'bundler'
+Bundler.require
 require 'open-uri'
 require 'nokogiri'
 
