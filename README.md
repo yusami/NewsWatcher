@@ -42,7 +42,7 @@ https://www.nikkei.com/
 
 ## Licence
 
-* Copyright &copy; 2016-2019 yusami
+* Copyright &copy; 2016-2020 yusami
 * Licensed under the [Apache License, Version 2.0][Apache]
 
 [Apache]: http://www.apache.org/licenses/LICENSE-2.0
