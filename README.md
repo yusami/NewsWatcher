@@ -1,9 +1,8 @@
 # NewsWatcher
 
-## Overview
+## Summary
 
-* Show the latest news.
-
+* Fetch the latest news.
 
 ## Description
 
@@ -17,10 +16,16 @@
 
 ## Usage
 
+* Run the script to install gems.
+
+~~~
+$ ./setup.sh
+~~~
+
 * Run the script.
 
 ~~~
-./watcher.rb
+$ ruby watcher.rb
 ~~~
 
 * Latest news is shown as below.
@@ -42,7 +47,7 @@ https://www.nikkei.com/
 
 ## Licence
 
-* Copyright &copy; 2016-2020 yusami
+* Copyright &copy; 2016-2021 yusami
 * Licensed under the [Apache License, Version 2.0][Apache]
 
 [Apache]: http://www.apache.org/licenses/LICENSE-2.0
