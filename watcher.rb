@@ -11,7 +11,7 @@ def fetch(site)
   opt = {}
   opt['User-Agent'] = 'Mozilla/5.0 (Windows NT 6.3; Win64, x64; Trident/7.0; rv:11.0) like Gecko'
   charset = nil
-  html = open(url,opt) do |f|
+  html = URI.open(url,opt) do |f|
     charset = f.charset
     f.read
   end
