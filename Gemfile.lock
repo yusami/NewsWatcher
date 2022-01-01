@@ -7,16 +7,17 @@ GEM
       racc (~> 1.4)
     nokogiri (1.12.5-x86_64-linux)
       racc (~> 1.4)
-    racc (1.5.2)
+    racc (1.6.0)
 
 PLATFORMS
   arm64-darwin-20
   x86_64-darwin-19
   x86_64-darwin-20
+  x86_64-darwin-21
   x86_64-linux
 
 DEPENDENCIES
   nokogiri (>= 1.11.0)
 
 BUNDLED WITH
-   2.2.15
+   2.2.22
