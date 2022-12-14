@@ -1,18 +1,14 @@
-name: Ruby
-on: [push]
+name: Main
+on: [push,pull_request]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: actions/setup-ruby@v1
+    - uses: ruby/setup-ruby@v1
       with:
         ruby-version: '2.7'
         bundler-cache: true
     - name: Build and test with Rake
       run: |
-        gem install bundler
-        bundle config set path 'vendor/bundle'
-        bundle config set without 'development test'
-        bundle install --retry 3
         bundle exec ruby watcher.rb
