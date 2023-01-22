@@ -4,6 +4,7 @@ require 'bundler'
 Bundler.require
 require 'open-uri'
 require 'nokogiri'
+require 'json'
 
 def fetch(site)
   # Fetch url
@@ -26,18 +27,28 @@ def fetch(site)
   regex = site[:regex]
   doc.xpath(regex).each_with_index do |node, i|
     if node.inner_text then
-        puts "- " + node.inner_text
+        puts "- " + node.inner_text.strip
         break if i >= 9
     end
   end
 end
 
+if !File.exist?('config.json')
+  puts 'The default config file is created since it does not exist.'
+  File.open("config.json", 'w') do |file|
+    # hash = [{"url" => "https://www.nikkei.com/", "regex" => '//div[@class="block_bummrov"]'}]
+    hash = [{url: "https://www.nikkei.com/", regex: '//div[@class="block_bummrov"]'}]
+    str = JSON.pretty_generate(hash)
+    file.write(str)
+  end
+end
+
 # URL and regex list
 sites = []
-sites << {:url => "https://news.yahoo.co.jp/", :regex=>'//li[@class="topicsListItem "]'}
-sites << {:url => "https://www.nikkei.com/", :regex=>'//a[@class="k-card__block-link"]'}
-sites << {:url => "https://www.kobe-np.co.jp/news/sanda/index.shtml", :regex=>"//div[@class='midashi']"}
-sites << {:url => "https://www.kobe-np.co.jp/news/himeji/index.shtml", :regex=>"//div[@class='midashi']"}
+File.open("config.json") do |file|
+  puts "Reading the config file..."
+  sites = JSON.load(file, nil, symbolize_names: true, create_additions: false)
+end
 
 sites.each do |site|
   fetch site
