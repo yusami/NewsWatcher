@@ -11,7 +11,7 @@
 
 ## Requirement
 
-* Ruby 2.7
+* Ruby 3.1
 * [nokogiri](http://www.nokogiri.org)
 
 ## Usage
