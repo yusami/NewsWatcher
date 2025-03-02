@@ -12,7 +12,6 @@ all: clean install run ## Install gems and run the script
 
 install: ## Install gems
 	echo "Installing gems..."
-	bundle config set --local path 'vendor/bundle'
 	bundle config set --local without 'development test'
 	bundle install
 
