@@ -36,8 +36,7 @@ end
 if !File.exist?('config.json')
   puts 'The default config file is created since it does not exist.'
   File.open("config.json", 'w') do |file|
-    # hash = [{"url" => "https://www.nikkei.com/", "regex" => '//div[@class="block_bummrov"]'}]
-    hash = [{url: "https://www.nikkei.com/", regex: '//div[@class="block_bummrov"]'}]
+    hash = [{url: "https://www.nikkei.com/news/category/", regex: "//a[@class='titleLink_t1r0kekp']"}]
     str = JSON.pretty_generate(hash)
     file.write(str)
   end
