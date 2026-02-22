@@ -19,6 +19,9 @@ install: ## Install gems
 run: ## Run the ruby script (default)
 	ruby watcher.rb
 
+update: ## Update gems
+	bundle update --bundler
+
 clean: ## Delete the existing gems
 	rm -rf ./vendor
 
